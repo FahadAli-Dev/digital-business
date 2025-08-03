@@ -1,4 +1,4 @@
-import "./globals.css";
+import "../style/globals.css";
 import { Josefin_Sans } from "next/font/google";
 
 export const metadata = {
