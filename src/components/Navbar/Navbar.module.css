@@ -50,8 +50,9 @@
   padding: 1rem 1.6rem;
   border-radius: 999px;
   font-size: 1rem;
-  color: var(--dark-bg);
   font-weight: 500;
+  font-family: inherit;
+  color: var(--dark-bg);
   cursor: pointer;
 }
 
@@ -62,7 +63,7 @@
   padding: 3rem 2rem;
   box-sizing: border-box;
   font-size: 1.2rem;
-  transition: all 0.2s ease-out;
+  transition: all 0.3s ease-out;
   transform: translateX(-150%);
 }
 

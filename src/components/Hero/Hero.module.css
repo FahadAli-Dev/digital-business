@@ -1,0 +1,12 @@
+.hero-wrapper {
+  background-color: var(--primary-color);
+  height: 100vh;
+}
+
+.hero-container {
+  padding: 8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4rem;
+}
