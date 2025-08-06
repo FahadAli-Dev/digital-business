@@ -65,6 +65,8 @@
   font-size: 1.2rem;
   transition: all 0.3s ease-out;
   transform: translateX(-150%);
+  position: absolute;
+  width: 100%;
 }
 
 .mobile-menuItems {

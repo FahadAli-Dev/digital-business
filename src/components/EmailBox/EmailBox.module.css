@@ -1,0 +1,47 @@
+.emailBox {
+  background-color: #fff;
+  padding: 1rem 2rem;
+  border-radius: 999px;
+  display: flex;
+  align-items: center;
+  width: 70%;
+  position: relative;
+  margin-top: 1.9rem;
+}
+
+.emailBox :nth-child(1) {
+  color: grey;
+}
+
+.emailBox input::placeholder {
+  font-size: 0.8rem;
+
+  font-family: initial;
+}
+
+.emailBox input {
+  border: none;
+  width: 100%;
+  margin-left: 1rem;
+  font-family: initial;
+  font-size: 1rem;
+  color: #969696;
+}
+
+.emailBox input:focus {
+  outline: none;
+}
+
+.emailBox button {
+  background-color: var(--secondary-color);
+  border: none;
+  padding: 1.2rem 2rem;
+  border-radius: 999px;
+  font-size: 1rem;
+  font-weight: 500;
+  font-family: inherit;
+  color: #fff;
+  cursor: pointer;
+  position: absolute;
+  right: 0.4rem;
+}
