@@ -2,17 +2,21 @@ import EmailBox from "../EmailBox/EmailBox";
 import style from "./Hero.module.css";
 import { heroData } from "../../utils/data";
 import Image from "next/image";
+
 const Hero = () => {
+  console.log();
   return (
     <div className={style["hero-wrapper"]}>
       <div className={style["hero-container"]}>
         <div className={style["hero-left"]}>
           {heroData.map((v, i) => {
-            console.log(v);
             return (
               <div
                 key={i}
-                style={{ backgroundColor: `${v.bg}` }}
+                style={{
+                  backgroundColor: `${v.bg}`,
+                  margin: `${i == 1 || i == 4 ? "-4rem 0 0 0.1rem" : ""}`,
+                }}
                 className={style["img-container"]}
               >
                 <Image
@@ -20,6 +24,7 @@ const Hero = () => {
                   src={v.src}
                   quality={100}
                   fill
+                  sizes="250px"
                   alt="img"
                   style={{
                     objectFit: "cover",
