@@ -28,6 +28,7 @@
 .hero-left {
   flex: 1;
   padding: 2rem;
+  box-sizing: border-box;
 }
 
 .hero-left {
@@ -116,6 +117,7 @@
   }
   .hero-container {
     flex-direction: column;
+    padding-top: 4rem;
   }
   .hero-right {
     display: grid;
@@ -132,5 +134,21 @@
     text-align: center;
     width: 80%;
     margin: 1rem auto 0 auto;
+  }
+}
+
+@media (max-width: 427px) {
+  .hero-left {
+    padding: 2rem;
+    box-sizing: border-box;
+  }
+
+  .hero-left {
+    grid-template-columns: repeat(3, 80px);
+    gap: 2rem;
+  }
+
+  .img-container {
+    height: 224px;
   }
 }

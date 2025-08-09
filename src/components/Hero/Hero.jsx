@@ -5,7 +5,6 @@ import style from "./Hero.module.css";
 import { heroData } from "../../utils/data";
 import Image from "next/image";
 import { motion } from "motion/react";
-import { useState, useEffect } from "react";
 
 const imgVariants = (delay) => ({
   offScreen: { y: "18rem" },
@@ -20,10 +19,6 @@ const imgVariants = (delay) => ({
 });
 
 const Hero = () => {
-  const [widht, setWidth] = useState();
-  useEffect(() => {
-    setWidth(window.innerWidth);
-  }, []);
   return (
     <div className={style["hero-wrapper"]}>
       <div className={style.container}>

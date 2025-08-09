@@ -1,10 +1,27 @@
 "use clinet";
 import { motion } from "motion/react";
+import { useState, useEffect, useCallback } from "react";
 
 import style from "./EmailBox.module.css";
 import { LuMail } from "react-icons/lu";
 
 const EmailBox = () => {
+  const [width, setWidth] = useState(0);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setWidth(window.innerWidth);
+    };
+
+    handleResize(); // set initial width
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
   const searchBarVariants = (duration) => ({
     ofScreen: { y: "2rem", opacity: 0 },
     onScreen: {
@@ -20,7 +37,7 @@ const EmailBox = () => {
     <motion.div
       initial={{ width: "10%" }}
       animate={{
-        width: "80%",
+        width: `${width > 1024 ? "80%" : width <= 560 ? "90%" : "60%"}`,
         transition: { duration: 1, ease: "linear" },
       }}
       className={style["emailBox"]}
@@ -43,7 +60,7 @@ const EmailBox = () => {
         animate="onScreen"
         variants={searchBarVariants(0.7)}
       >
-        Get Funded
+        {width <= 420 ? "Funded" : "Get Funded"}
       </motion.button>
     </motion.div>
   );

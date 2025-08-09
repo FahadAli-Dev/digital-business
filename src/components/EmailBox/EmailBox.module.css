@@ -50,16 +50,19 @@
 
 /* Media queries for responsiveness */
 
-/* @media (min-width: 560px) and (max-width: 1024px) {
-  .searchBox-wrapper {
-    width: 90%;
-    margin: 0 auto;
-    display: flex;
-    justify-content: center;
-  }
-} */
 @media (max-width: 420px) {
+  .emailBox {
+    height: 62px;
+  }
   .emailBox button {
-    padding: 1.2rem 1rem;
+    padding: 1.1rem 1.5rem;
+  }
+
+  .emailBox input {
+    margin-left: 0.5rem;
+  }
+
+  .emailBox input::placeholder {
+    padding-left: 16%;
   }
 }
