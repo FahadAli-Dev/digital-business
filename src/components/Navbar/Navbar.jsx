@@ -18,11 +18,20 @@ const Navbar = () => {
             </div>
             <div className={style["menu-icon"]}>
               {openMobileMenu ? (
-                <RxCross2 size={30} onClick={() => setOpenMobileMenu(false)} />
+                <RxCross2
+                  size={30}
+                  onClick={() => {
+                    setOpenMobileMenu(false);
+                    document.body.style.overflow = "";
+                  }}
+                />
               ) : (
                 <BiMenuAltRight
                   size={30}
-                  onClick={() => setOpenMobileMenu(true)}
+                  onClick={() => {
+                    setOpenMobileMenu(true);
+                    document.body.style.overflow = "hidden";
+                  }}
                 />
               )}
             </div>
