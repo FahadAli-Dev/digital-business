@@ -52,10 +52,11 @@ const Hero = () => {
                       <Image
                         className={style["hero-img"]}
                         src={v.src}
-                        quality={100}
-                        fill
-                        sizes="240px"
                         alt="img"
+                        fill
+                        quality={100}
+                        priority
+                        sizes="240px"
                       />
                     </motion.div>
                   </motion.div>
