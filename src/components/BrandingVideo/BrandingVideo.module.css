@@ -16,13 +16,29 @@
   width: 95%;
 }
 
+@media (max-width: 1200px) {
+  .bv-container {
+    max-width: 960px;
+  }
+}
+
 @media (max-width: 1024px) {
   .bv-container {
     margin-top: 1rem;
   }
 }
 
-@media (max-width: 720px) {
+@media (max-width: 998px) {
+  .bv-container {
+    max-width: 720px;
+  }
+}
+
+@media (max-width: 768px) {
+  .bv-container {
+    max-width: 540px;
+  }
+
   .brandingVideo {
     border-radius: 2rem;
   }
