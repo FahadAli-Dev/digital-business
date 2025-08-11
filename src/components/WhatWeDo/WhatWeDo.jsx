@@ -12,6 +12,7 @@ const WhatWeDo = () => {
           </span>
           <span className="des">Here is how we can evaluate</span>
         </div>
+        <div className={style["wwd-blocks"]}></div>
       </div>
     </div>
   );
