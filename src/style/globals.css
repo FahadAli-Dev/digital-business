@@ -41,6 +41,21 @@ body {
   line-height: 1.4rem;
 }
 
+.text {
+  color: var(--text-color);
+  font-size: 1.1rem;
+  line-height: 1.8rem;
+}
+
+.sec-title {
+  font-size: 2rem;
+  color: var(--title-color);
+  font-weight: 600;
+  text-align: center;
+  line-height: 3rem;
+  text-transform: capitalize;
+}
+
 @media (max-width: 768px) {
   .title {
     font-size: 2.2rem;
@@ -49,10 +64,18 @@ body {
   .des {
     font-size: 1.2rem;
   }
+
+  .sec-title {
+    font-size: 1.8rem;
+  }
 }
 
 @media (max-width: 640px) {
   .title {
     font-size: 1.8rem;
+  }
+
+  .sec-title {
+    font-size: 1.6rem;
   }
 }

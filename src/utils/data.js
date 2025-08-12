@@ -24,3 +24,30 @@ export const heroData = [
     bg: "#0be4d1",
   },
 ];
+
+export const features = [
+  {
+    icon: "/features/feature-1.webp",
+    title: "3x monthly revenue",
+  },
+  {
+    icon: "/features/feature-2.webp",
+    title: "Flat fee of 6-12%",
+  },
+  {
+    icon: "/features/feature-3.webp",
+    title: "Flexible repayments by revenue share",
+  },
+  {
+    icon: "/features/feature-4.webp",
+    title: "3-4 years repayment",
+  },
+  {
+    icon: "/features/feature-5.webp",
+    title: "$10-100k seed investment",
+  },
+  {
+    icon: "/features/feature-6.webp",
+    title: "2% of revenue up to 3X cap",
+  },
+];
