@@ -1,6 +1,15 @@
+"use client";
+
 import style from "./WhatWeDo.module.css";
 import { features } from "../../utils/data";
 import Image from "next/image";
+import { motion } from "motion/react";
+import {
+  containerVariants,
+  desVariants,
+  tagVariants,
+  titleVariants,
+} from "@/src/utils/animation";
 
 const WhatWeDo = () => {
   return (
@@ -8,32 +17,68 @@ const WhatWeDo = () => {
       <div className={style["wwd-container"]}>
         {/* WhatWeDo Head */}
         <div className={style["wwd-head"]}>
-          <span className="tag">What we do</span>
-          <span className="title">
+          <motion.span
+            className="tag"
+            initial="offscreen"
+            whileInView="onscreen"
+            variants={tagVariants}
+          >
+            What we do
+          </motion.span>
+          <motion.span
+            className="title"
+            initial="offscreen"
+            whileInView="onscreen"
+            variants={titleVariants}
+          >
             Empowering founders with non dilutive capital and execution
             expertise
-          </span>
-          <span className="des">Here is how we can evaluate</span>
+          </motion.span>
+          <motion.span
+            className="des"
+            initial="offscreen"
+            whileInView="onscreen"
+            variants={desVariants}
+          >
+            Here is how we can evaluate
+          </motion.span>
         </div>
 
         {/* WhatWeDo Blocks */}
         <div className={style["wwd-blocks"]}>
           {/* WhatWeDo Block-1  */}
           <div className={style["wwd-block"]}>
-            <span className="sec-title">Blue Adnavces</span>
-            <span className="text">
+            <motion.span
+              className="sec-title"
+              initial="offscreen"
+              whileInView="onscreen"
+              variants={titleVariants}
+            >
+              Blue Adnavces
+            </motion.span>
+            <motion.span
+              className="text"
+              initial="offscreen"
+              whileInView="onscreen"
+              variants={desVariants}
+            >
               Fund recurring growth expenses e.g. customer acquisition,
               inventory
-            </span>
+            </motion.span>
 
             {/* WhatWeDo Block Feature-1  */}
             <div className={style["block-features"]}>
               {features.slice(0, 3).map((fea, idx) => {
                 return (
-                  <div key={idx}>
+                  <motion.div
+                    key={idx}
+                    initial="offscreen"
+                    whileInView="onscreen"
+                    variants={containerVariants((idx + 1) * 0.1)}
+                  >
                     <Image src={fea.icon} alt="img" width={60} height={60} />{" "}
                     <span>{fea.title}</span>
-                  </div>
+                  </motion.div>
                 );
               })}
             </div>
@@ -41,19 +86,36 @@ const WhatWeDo = () => {
 
           {/* WhatWeDo Block-2  */}
           <div className={style["wwd-block"]}>
-            <span className="sec-title">Blue Seed</span>
-            <span className="text">
+            <motion.span
+              className="sec-title"
+              initial="offscreen"
+              whileInView="onscreen"
+              variants={titleVariants}
+            >
+              Blue Seed
+            </motion.span>
+            <motion.span
+              className="text"
+              initial="offscreen"
+              whileInView="onscreen"
+              variants={desVariants}
+            >
               Fund one-offs to scale e.g. product, hiring
-            </span>
+            </motion.span>
 
             {/* WhatWeDo Block Feature-2  */}
             <div className={style["block-features"]}>
               {features.slice(3, 6).map((fea, idx) => {
                 return (
-                  <div key={idx}>
+                  <motion.div
+                    key={idx}
+                    initial="offscreen"
+                    whileInView="onscreen"
+                    variants={containerVariants((idx + 1) * 0.1)}
+                  >
                     <Image src={fea.icon} alt="img" width={60} height={60} />{" "}
                     <span>{fea.title}</span>
-                  </div>
+                  </motion.div>
                 );
               })}
             </div>
@@ -61,7 +123,12 @@ const WhatWeDo = () => {
         </div>
 
         {/* WhatWeDo Support  */}
-        <div className={style["wwd-support"]}>
+        <motion.div
+          className={style["wwd-support"]}
+          initial="offscreen"
+          whileInView="onscreen"
+          variants={containerVariants(0.3)}
+        >
           <div>
             <span className="sec-title">Blue Growth Support</span>
             <span className="des">
@@ -80,7 +147,7 @@ const WhatWeDo = () => {
               talent management
             </span>
           </div>
-        </div>
+        </motion.div>
       </div>
     </div>
   );
