@@ -24,6 +24,14 @@
   margin: auto;
 }
 
+.od-head > :nth-child(1) {
+  color: white;
+}
+
+.od-head > :nth-child(3) {
+  color: white;
+}
+
 .od-features {
   display: flex;
   justify-content: space-between;
@@ -41,6 +49,7 @@
   box-shadow: var(--shadow);
   padding: 2rem;
   border-radius: 1rem;
+  background-color: white;
 }
 
 @media (max-width: 1240px) {
@@ -50,8 +59,13 @@
 }
 
 @media (max-width: 1024px) {
+  .od-wrapper {
+    height: auto;
+  }
+
   .od-container {
     max-width: 720px;
+    margin-top: 10rem;
   }
 
   .od-features {

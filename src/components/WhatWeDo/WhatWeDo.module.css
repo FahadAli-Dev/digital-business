@@ -39,6 +39,7 @@
   box-shadow: var(--shadow);
   padding: 2rem;
   border-radius: 2rem;
+  background-color: white;
 }
 
 .block-features {
@@ -79,6 +80,7 @@
   box-shadow: var(--shadow);
   border-radius: 1rem;
   box-sizing: border-box;
+  background-color: white;
 }
 
 .wwd-support > div {
@@ -137,5 +139,6 @@
 
   .wwd-support {
     flex-direction: column;
+    width: 93%;
   }
 }
