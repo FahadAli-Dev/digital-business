@@ -6,6 +6,7 @@ import Hero from "../components/Hero/Hero";
 import BrandingVideo from "../components/BrandingVideo/BrandingVideo";
 import WhatWeDo from "../components/WhatWeDo/WhatWeDo";
 import OurDiff from "../components/OurDiff/OurDiff";
+import HowItWorks from "../components/HowItWorks/HowItWorks";
 import { motion } from "motion/react";
 
 const page = () => {
@@ -27,6 +28,8 @@ const page = () => {
       >
         <OurDiff />
       </motion.div>
+
+      <HowItWorks />
     </div>
   );
 };

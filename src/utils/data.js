@@ -43,6 +43,24 @@ export const heroData = [
   },
 ];
 
+export const HowItWork = [
+  {
+    icon: "/HowItWork/icon-1.png",
+    title: "Connect",
+    des: "Register and qualify for funding in less than 5 mins. Connect revenue and marketing platforms you already use.",
+  },
+  {
+    icon: "/HowItWork/icon-2.png",
+    title: "Get Funded",
+    des: "Get a term sheet with upto 3 funding offers. Select option that best suits and complete onboarding to receive funds in days",
+  },
+  {
+    icon: "/HowItWork/icon-3.png",
+    title: "Support Growth",
+    des: "Access curated feed of actionable insights and on demand execution expertise. Auto qualify for follow on funding as you grow",
+  },
+];
+
 export const features = [
   {
     icon: "/features/feature-1.webp",
