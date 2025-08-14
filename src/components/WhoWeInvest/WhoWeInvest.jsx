@@ -2,6 +2,12 @@ import { whoWeInvest } from "@/src/utils/data";
 import style from "./WhoWeInvest.module.css";
 import Image from "next/image";
 import { useEffect, useState } from "react";
+import {
+  containerVariants,
+  tagVariants,
+  titleVariants,
+} from "@/src/utils/animation";
+import { motion } from "motion/react";
 
 const WhoWeInvest = () => {
   const [width, setWidth] = useState(0);
@@ -22,30 +28,51 @@ const WhoWeInvest = () => {
         {/* left side  */}
         <div className={style["wwi-left"]}>
           <div className={style["wwi-head"]}>
-            <span className="tag">Who we invest in</span>
-            <span className="title">
+            <motion.span
+              className="tag"
+              initial="offscreen"
+              whileInView="onscreen"
+              variants={tagVariants}
+            >
+              Who we invest in
+            </motion.span>
+            <motion.span
+              className="title"
+              initial="offscreen"
+              whileInView="onscreen"
+              variants={titleVariants}
+            >
               Digital businesses <br /> with early traction
-            </span>
+            </motion.span>
           </div>
           <div className={style["wwi-details"]}>
             {whoWeInvest.map((dea, idx) => {
               return (
-                <div className={style["wwi-detail"]} key={idx}>
+                <motion.div
+                  className={style["wwi-detail"]}
+                  key={idx}
+                  initial="offscreen"
+                  whileInView="onscreen"
+                  variants={containerVariants(idx * 0.05 + 1)}
+                >
                   <span className="des">{dea.title}</span>
                   <span className="text">{dea.des}</span>
-                </div>
+                </motion.div>
               );
             })}
           </div>
         </div>
 
         {/* right side  */}
-        <div className={style["wwi-right"]}>
+        <motion.div
+          className={style["wwi-right"]}
+          initial="offscreen"
+          whileInView="onscreen"
+          variants={containerVariants(0.5)}
+        >
           <Image
             src="/WhoWeInvest/persons.png"
             alt="person"
-            // width={600}
-            // height={720}
             fill
             sizes="600"
             style={{
@@ -55,7 +82,7 @@ const WhoWeInvest = () => {
               }`,
             }}
           />
-        </div>
+        </motion.div>
       </div>
     </div>
   );
