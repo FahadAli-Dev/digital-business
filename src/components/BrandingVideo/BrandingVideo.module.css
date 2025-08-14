@@ -1,5 +1,6 @@
 .bv-wrapper {
   width: 100%;
+  position: relative;
 }
 
 .bv-container {
@@ -9,11 +10,13 @@
   max-width: 1200px;
   margin: auto;
   margin-top: -8rem;
+  position: relative;
 }
 
 .brandingVideo {
   border-radius: 4rem;
   width: 95%;
+  position: relative;
 }
 
 @media (max-width: 1200px) {

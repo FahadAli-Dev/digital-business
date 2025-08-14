@@ -1,8 +1,21 @@
 import { whoWeInvest } from "@/src/utils/data";
 import style from "./WhoWeInvest.module.css";
 import Image from "next/image";
+import { useEffect, useState } from "react";
 
 const WhoWeInvest = () => {
+  const [width, setWidth] = useState(0);
+  useEffect(() => {
+    const handleResize = () => {
+      setWidth(window.innerWidth);
+    };
+
+    handleResize(); // set initial width
+
+    window.addEventListener("resize", handleResize);
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
   return (
     <div className={style["wwi-wrapper"]}>
       <div className={style["wwi-container"]}>
@@ -31,9 +44,16 @@ const WhoWeInvest = () => {
           <Image
             src="/WhoWeInvest/persons.png"
             alt="person"
-            width={600}
-            height={556}
-            style={{ objectFit: "contain" }}
+            // width={600}
+            // height={720}
+            fill
+            sizes="600"
+            style={{
+              objectFit: "contain",
+              marginTop: `${
+                width > 1240 ? "3.3rem" : width > 1024 ? "6.7rem" : ""
+              }`,
+            }}
           />
         </div>
       </div>
