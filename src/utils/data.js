@@ -43,7 +43,7 @@ export const heroData = [
   },
 ];
 
-export const HowItWork = [
+export const howItWork = [
   {
     icon: "/HowItWork/icon-1.png",
     title: "Connect",
@@ -85,5 +85,24 @@ export const features = [
   {
     icon: "/features/feature-6.webp",
     title: "2% of revenue up to 3X cap",
+  },
+];
+
+export const whoWeInvest = [
+  {
+    title: "Digital Business Model",
+    des: "Digital business model e.g. SaaS, subscription, D2C, apps",
+  },
+  {
+    title: "Revenue Generating",
+    des: "Revenue generating for 6 months, > $1k in monthly recurring revenue",
+  },
+  {
+    title: "Support Growth",
+    des: "Industry expertise: Fintech, Health, Deep tech, B2B software",
+  },
+  {
+    title: "International Expansion",
+    des: "Registered in Australia and Singapore (initially) with appetite for international expansion",
   },
 ];

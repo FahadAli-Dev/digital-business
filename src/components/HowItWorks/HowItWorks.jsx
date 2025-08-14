@@ -1,7 +1,7 @@
 "use client";
 
 import style from "@/src/components/HowItWorks/HowItWorks.module.css";
-import { HowItWork } from "@/src/utils/data";
+import { howItWork } from "@/src/utils/data";
 import Image from "next/image";
 import { motion, scale } from "motion/react";
 import { tagVariants, titleVariants } from "@/src/utils/animation";
@@ -37,7 +37,7 @@ const HowItWorks = () => {
           </motion.span>
         </div>
         <div className={style["hiw-features"]}>
-          {HowItWork.map((fea, idx) => {
+          {howItWork.map((fea, idx) => {
             return (
               <motion.div
                 className={style["hiw-feature"]}

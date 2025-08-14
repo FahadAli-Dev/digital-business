@@ -1,0 +1,84 @@
+.wwi-wrapper {
+  width: 100%;
+}
+
+.wwi-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  max-width: 1200px;
+  margin: auto;
+  text-align: center;
+  margin-top: 13rem;
+}
+
+.wwi-container > div {
+  flex: 1;
+}
+
+.wwi-left {
+  display: flex;
+  flex-direction: column;
+  gap: 2.3rem;
+}
+
+.wwi-right {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.wwi-head {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  justify-content: center;
+  align-items: start;
+  text-align: start;
+}
+
+.wwi-head > :nth-of-type(2) {
+  color: white;
+}
+.wwi-details {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  text-align: start;
+  gap: 2.3rem;
+}
+
+.wwi-detail {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  max-width: 28rem;
+}
+
+.wwi-detail > :nth-of-type(1) {
+  color: var(--fourth-color);
+}
+
+.wwi-detail > :nth-of-type(2) {
+  color: white;
+  text-align: justify;
+}
+
+@media (max-width: 1240px) {
+  .wwi-container {
+    max-width: 960px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .wwi-container {
+    max-width: 720px;
+  }
+}
+
+@media (max-width: 768px) {
+  .wwi-container {
+    max-width: 540px;
+  }
+}
