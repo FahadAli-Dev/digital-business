@@ -1,14 +1,15 @@
 "use client";
 
 import style from "./page.module.css";
+import { motion } from "motion/react";
 import Navbar from "../components/Navbar/Navbar.jsx";
 import Hero from "../components/Hero/Hero";
 import BrandingVideo from "../components/BrandingVideo/BrandingVideo";
 import WhatWeDo from "../components/WhatWeDo/WhatWeDo";
 import OurDiff from "../components/OurDiff/OurDiff";
 import HowItWorks from "../components/HowItWorks/HowItWorks";
-import { motion } from "motion/react";
 import WhoWeInvest from "../components/WhoWeInvest/WhoWeInvest";
+import Testimonials from "../components/Testimonials/Testimonials";
 
 const page = () => {
   return (
@@ -43,6 +44,8 @@ const page = () => {
       >
         <WhoWeInvest />
       </motion.div>
+
+      <Testimonials />
     </div>
   );
 };

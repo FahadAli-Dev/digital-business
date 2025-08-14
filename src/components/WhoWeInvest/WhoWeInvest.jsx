@@ -78,7 +78,7 @@ const WhoWeInvest = () => {
             style={{
               objectFit: "contain",
               marginTop: `${
-                width > 1240 ? "3.3rem" : width > 1024 ? "6.7rem" : ""
+                width > 1240 ? "3.3rem" : width > 1024 ? "6.8rem" : ""
               }`,
             }}
           />
