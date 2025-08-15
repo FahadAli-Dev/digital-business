@@ -1,0 +1,75 @@
+.f-wrapper {
+  width: 100%;
+  background-color: var(--primary-color);
+  margin-top: 5rem;
+}
+
+.f-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 5rem 0rem 2rem 0rem;
+  text-align: center;
+}
+
+.f-container > :nth-of-type(1) {
+  color: white;
+}
+
+.f-container > :nth-child(2) {
+  width: 65%;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.f-container > :nth-child(2) > :nth-child(1) {
+  margin: 0;
+}
+
+.f-container > hr {
+  border-color: var(--border-color-light);
+  width: 100%;
+}
+
+.f-menu {
+  width: 100%;
+  color: white;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.f-menu > span {
+  cursor: pointer;
+}
+
+@media (max-width: 1240px) {
+  .f-container {
+    max-width: 960px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .f-container {
+    max-width: 720px;
+  }
+  .f-container > :nth-child(2) {
+    width: 100%;
+  }
+  .f-menu {
+    flex-direction: column;
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .f-container {
+    max-width: 540px;
+  }
+}

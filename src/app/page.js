@@ -10,6 +10,7 @@ import OurDiff from "../components/OurDiff/OurDiff";
 import HowItWorks from "../components/HowItWorks/HowItWorks";
 import WhoWeInvest from "../components/WhoWeInvest/WhoWeInvest";
 import Testimonials from "../components/Testimonials/Testimonials";
+import Footer from "../components/Footer/Footer";
 
 const page = () => {
   return (
@@ -46,6 +47,7 @@ const page = () => {
       </motion.div>
 
       <Testimonials />
+      <Footer />
     </div>
   );
 };
