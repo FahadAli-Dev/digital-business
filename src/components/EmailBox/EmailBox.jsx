@@ -23,8 +23,8 @@ const EmailBox = () => {
   }, []);
 
   const searchBarVariants = (duration) => ({
-    ofScreen: { y: "2rem", opacity: 0 },
-    onScreen: {
+    offscreen: { y: "2rem", opacity: 0 },
+    onscreen: {
       y: "0rem",
       opacity: 1,
       transition: { delay: 1, ease: "linear", duration: duration },
@@ -36,28 +36,32 @@ const EmailBox = () => {
   return (
     <motion.div
       initial={{ width: "10%" }}
-      animate={{
+      whileInView={{
         width: `${width > 1024 ? "80%" : width <= 560 ? "90%" : "60%"}`,
         transition: { duration: 1, ease: "linear" },
       }}
+      viewport={{ once: true }}
       className={style["emailBox"]}
     >
       <MotionLuMail
-        initial="ofScreen"
-        animate="onScreen"
+        initial="offscreen"
+        whileInView="onscreen"
         variants={searchBarVariants(0.5)}
+        viewport={{ once: true }}
         size={35}
       />
       <motion.input
-        initial="ofScreen"
-        animate="onScreen"
+        initial="offscreen"
+        whileInView="onscreen"
         variants={searchBarVariants(0.6)}
+        viewport={{ once: true }}
         type="text"
         placeholder="Enter Email"
       />
       <motion.button
-        initial="ofScreen"
-        animate="onScreen"
+        initial="offscreen"
+        whileInView="onscreen"
+        viewport={{ once: true }}
         variants={searchBarVariants(0.7)}
       >
         {width <= 420 ? "Funded" : "Get Funded"}

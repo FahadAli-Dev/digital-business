@@ -20,11 +20,12 @@
 }
 
 .f-container > :nth-child(2) {
-  width: 65%;
+  width: 67%;
   margin: auto;
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
 }
 
 .f-container > :nth-child(2) > :nth-child(1) {
@@ -47,29 +48,33 @@
 
 .f-menu > span {
   cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 700;
 }
 
 @media (max-width: 1240px) {
   .f-container {
     max-width: 960px;
   }
+
+  .f-container > :nth-child(2) {
+    width: 83%;
+  }
 }
 
 @media (max-width: 1024px) {
-  .f-container {
-    max-width: 720px;
-  }
   .f-container > :nth-child(2) {
     width: 100%;
   }
+
   .f-menu {
     flex-direction: column;
     gap: 2rem;
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 560px) {
   .f-container {
-    max-width: 540px;
+    max-width: 95%;
   }
 }

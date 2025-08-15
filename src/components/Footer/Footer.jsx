@@ -18,7 +18,7 @@ const Footer = () => {
           <span>testimonials</span>
         </div>
         <hr />
-        <span className="text">Made width by FAHADALI</span>
+        <span className="text">© 2025 FAHADALI. All rights reserved</span>
       </div>
     </div>
   );
