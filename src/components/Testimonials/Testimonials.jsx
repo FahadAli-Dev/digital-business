@@ -1,3 +1,4 @@
+import SlickSlider from "./SlickSlider/SlickSlider";
 import style from "./Testimonials.module.css";
 
 const Testimonials = () => {
@@ -11,6 +12,8 @@ const Testimonials = () => {
           </span>
           <span className="des">What people say about us</span>
         </div>
+
+        <SlickSlider />
       </div>
     </div>
   );

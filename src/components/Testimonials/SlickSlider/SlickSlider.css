@@ -1,0 +1,88 @@
+.slick-slider {
+  margin-top: 5rem;
+  width: 100%;
+}
+
+.slick-slide > div {
+  padding: 0 20px;
+}
+
+.slick-track {
+  padding: 4rem 0;
+}
+
+.slick-dots {
+  bottom: 0;
+}
+
+.comment {
+  display: flex !important;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 3rem;
+  border-radius: 20px;
+  padding: 2rem;
+  box-sizing: border-box;
+  text-align: left;
+}
+
+.c-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  height: 200px;
+  align-items: flex-start;
+}
+
+.c-content > span {
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+.c-info {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.c-icon {
+  background-color: #877eb5;
+  color: white;
+  width: 3rem;
+  height: 3rem;
+  font-size: 1.1rem;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.c-person {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.c-person > span {
+  font-weight: 700;
+}
+
+.c-person > :nth-child(2) {
+  color: hsla(0, 0%, 50%, 0.688);
+  font-size: 0.8rem;
+}
+
+@media (max-width: 568px) {
+  .comment {
+    box-shadow: var(--shadow);
+  }
+}
+
+@media (min-width: 1241px) {
+  .slick-slide.slick-active.slick-current + .slick-slide .comment {
+    transition: all 1s ease-out;
+    scale: 1.1;
+    transform: translateY(-30px);
+    box-shadow: var(--shadow);
+  }
+}

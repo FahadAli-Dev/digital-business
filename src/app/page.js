@@ -41,7 +41,7 @@ const page = () => {
         onViewportLeave={() => {
           document.body.style.background = "white";
         }}
-        viewport={{ amount: 0.2 }}
+        viewport={{ amount: 0.3 }}
       >
         <WhoWeInvest />
       </motion.div>
