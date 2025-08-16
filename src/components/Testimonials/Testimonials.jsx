@@ -12,7 +12,6 @@ const Testimonials = () => {
           </span>
           <span className="des">What people say about us</span>
         </div>
-
         <SlickSlider />
       </div>
     </div>

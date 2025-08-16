@@ -4,33 +4,42 @@ import { testimonialsData } from "@/src/utils/data";
 import "./SlickSlider.css";
 import Slider from "react-slick";
 import Image from "next/image";
+import { useEffect, useState } from "react";
 
 const SlickSlider = () => {
-  let settings = {
-    dots: true,
-    infinite: true,
-    speed: 1000,
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    initialSlide: 0,
-    touchMove: true,
-    useCSS: true,
-    responsive: [
-      {
-        breakpoint: 1240,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2,
+  const [settings, setSettings] = useState(null);
+  useEffect(() => {
+    setSettings({
+      dots: true,
+      infinite: true,
+      speed: 1000,
+      slidesToShow:
+        window.innerWidth <= 768 ? 1 : window.innerWidth <= 1024 ? 2 : 3,
+      slidesToScroll: 1,
+      initialSlide: 0,
+      touchMove: true,
+      useCSS: true,
+      responsive: [
+        {
+          breakpoint: 1240,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 2,
+          },
         },
-      },
-      {
-        breakpoint: 768,
-        settings: {
-          slidesToShow: 1,
+        {
+          breakpoint: 768,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+          },
         },
-      },
-    ],
-  };
+      ],
+    });
+  }, []);
+
+  if (!settings) return;
+
   return (
     <Slider {...settings}>
       {testimonialsData.map((data, idx) => {
