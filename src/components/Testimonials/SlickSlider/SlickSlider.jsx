@@ -52,6 +52,7 @@ const SlickSlider = () => {
                 alt="img"
                 width={40}
                 height={30}
+                style={{ width: "40px", height: "30px" }}
               />
               <span>{data.comment}</span>
             </div>

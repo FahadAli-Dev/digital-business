@@ -4,7 +4,6 @@ import "../style/globals.css";
 import { Josefin_Sans } from "next/font/google";
 
 export const metadata = {
-  viewport: "width=device-width, initial-scale=1.0",
   title: {
     default: "Digital Business - The Knowledge Creating Company",
     template: "%s | Fahad Ali",
@@ -35,10 +34,6 @@ const Josef = Josefin_Sans({
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      </head>
-
       <body className={Josef.className}>{children}</body>
     </html>
   );

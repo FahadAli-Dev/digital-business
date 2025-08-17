@@ -1,6 +1,7 @@
 .slick-slider {
   margin-top: 5rem;
   width: 100%;
+  overflow: hidden;
 }
 
 .slick-slide > div {
@@ -8,11 +9,19 @@
 }
 
 .slick-track {
-  padding: 4rem 0;
+  padding: 4rem 0rem;
 }
 
 .slick-dots {
   bottom: 0;
+}
+
+.slick-prev {
+  display: none !important;
+}
+
+.slick-next {
+  display: none !important;
 }
 
 .comment {
@@ -24,6 +33,7 @@
   padding: 2rem;
   box-sizing: border-box;
   text-align: left;
+  background-color: white;
 }
 
 .c-content {
