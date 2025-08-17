@@ -3,7 +3,7 @@ import style from "./Footer.module.css";
 
 const Footer = () => {
   return (
-    <div className={style["f-wrapper"]}>
+    <div id="get-funded" className={style["f-wrapper"]}>
       <div className={style["f-container"]}>
         <span className="title">Get Funded Today!</span>
         <div>

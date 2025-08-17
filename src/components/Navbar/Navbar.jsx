@@ -4,11 +4,34 @@ import { useState } from "react";
 import style from "./Navbar.module.css";
 import { BiMenuAltRight } from "react-icons/bi";
 import { RxCross2 } from "react-icons/rx";
+import {
+  motion,
+  useMotionValueEvent,
+  useScroll,
+  useSpring,
+} from "motion/react";
+import Link from "next/link";
 
 const Navbar = () => {
   const [openMobileMenu, setOpenMobileMenu] = useState(false);
+  const [navStyle, setNavStyle] = useState("");
+  const { scrollYProgress } = useScroll();
+  const smooth = useSpring(scrollYProgress, {
+    stiffness: 100,
+    damping: 30,
+    restDelta: 0.001,
+  });
+
+  useMotionValueEvent(smooth, "change", (latest) => {
+    if (latest > 0.2) {
+      setNavStyle(style.sticky);
+    } else if (latest < 0.19) {
+      setNavStyle("");
+    }
+  });
+
   return (
-    <section className={style["n-wrapper"]}>
+    <section className={`${style["n-wrapper"]} ${navStyle}`}>
       {/* desktop menu  */}
       <div className={style["nd-container"]}>
         <div className={style["n-container"]}>
@@ -37,13 +60,23 @@ const Navbar = () => {
             </div>
             <div className={style["menu-right"]}>
               <div className={style["menu-items"]}>
-                <span>What we do</span>
-                <span>How it works</span>
-                <span>Who we invest in</span>
-                <span>Testimonials</span>
+                <Link href="#what-we-do">
+                  <span>What we do</span>
+                </Link>
+                <Link href="#how-it-work">
+                  <span>How it works</span>
+                </Link>
+                <Link href="#who-we-invest-in">
+                  <span>Who we invest in</span>
+                </Link>
+                <Link href="#testimonials">
+                  <span>Testimonials</span>
+                </Link>
               </div>
               <div className={style["fund-btn"]}>
-                <button>Get Funded</button>
+                <Link href="#get-funded">
+                  <button>Get Funded</button>
+                </Link>
               </div>
             </div>
           </div>
@@ -56,13 +89,63 @@ const Navbar = () => {
         style={openMobileMenu ? { transform: "translateX(0)" } : {}}
       >
         <div className={style["mobile-menuItems"]}>
-          <span>What we do</span>
-          <span>How it works</span>
-          <span>Who we invest in</span>
-          <span>Testimonials</span>
+          <Link
+            href="#what-we-do"
+            onClick={() => {
+              setOpenMobileMenu(false);
+              document.body.style.overflow = "";
+            }}
+          >
+            <span>What we do</span>
+          </Link>
+          <Link
+            href="#our-difference"
+            onClick={() => {
+              setOpenMobileMenu(false);
+              document.body.style.overflow = "";
+            }}
+          >
+            <span>Our Difference</span>
+          </Link>
+          <Link
+            href="#how-it-work"
+            onClick={() => {
+              setOpenMobileMenu(false);
+              document.body.style.overflow = "";
+            }}
+          >
+            <span>How it works</span>
+          </Link>
+          <Link
+            href="#who-we-invest-in"
+            onClick={() => {
+              setOpenMobileMenu(false);
+              document.body.style.overflow = "";
+            }}
+          >
+            <span>Who we invest in</span>
+          </Link>
+          <Link
+            href="#testimonials"
+            onClick={() => {
+              setOpenMobileMenu(false);
+              document.body.style.overflow = "";
+            }}
+          >
+            <span>Testimonials</span>
+          </Link>
         </div>
         <div className={style["fund-btn"]}>
-          <button>Get Funded</button>
+          <Link href="#get-funded">
+            <button
+              onClick={() => {
+                setOpenMobileMenu(false);
+                document.body.style.overflow = "";
+              }}
+            >
+              Get Funded
+            </button>
+          </Link>
         </div>
       </div>
     </section>

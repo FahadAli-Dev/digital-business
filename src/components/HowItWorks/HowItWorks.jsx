@@ -16,7 +16,7 @@ const featureVariants = {
 
 const HowItWorks = () => {
   return (
-    <div className={style["hiw-wrapper"]}>
+    <div id="how-it-work" className={style["hiw-wrapper"]}>
       <div className={style["hiw-container"]}>
         <div className={style["hiw-head"]}>
           <motion.span

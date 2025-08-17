@@ -13,7 +13,7 @@ import {
 
 const WhatWeDo = () => {
   return (
-    <div className={style["wwd-wrapper"]}>
+    <div id="what-we-do" className={style["wwd-wrapper"]}>
       <div className={style["wwd-container"]}>
         {/* WhatWeDo Head */}
         <div className={style["wwd-head"]}>

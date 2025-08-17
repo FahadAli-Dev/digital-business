@@ -1,5 +1,6 @@
 .hero-wrapper {
   background-color: var(--primary-color);
+  margin-top: -0.1px;
 }
 
 @media (min-width: 1025px) {
@@ -118,7 +119,7 @@
   .hero-container {
     flex-direction: column;
     gap: 1rem;
-    padding-top: 3rem;
+    padding-top: 3.1rem;
   }
   .hero-right {
     display: grid;

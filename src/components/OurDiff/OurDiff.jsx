@@ -13,7 +13,7 @@ import {
 
 const OurDiff = () => {
   return (
-    <div className={style["od-wrapper"]}>
+    <div id="our-difference" className={style["od-wrapper"]}>
       <div className={style["od-container"]}>
         <div className={style["od-head"]}>
           <motion.span

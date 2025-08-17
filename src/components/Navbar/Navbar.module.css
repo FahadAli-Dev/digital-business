@@ -38,10 +38,14 @@
   gap: 2.5rem;
 }
 
-.menu-items > span {
+.menu-items > a {
+  text-decoration: none;
   cursor: pointer;
   text-transform: uppercase;
   font-size: 0.9rem;
+  font-weight: 500;
+  list-style: none;
+  color: white;
 }
 
 .fund-btn button {
@@ -75,11 +79,13 @@
   flex-direction: column;
 }
 
-.nm-container span {
+.nm-container > .mobile-menuItems > a {
+  text-decoration: none;
   border-bottom: 1px solid var(--border-color);
   padding-bottom: 1rem;
   margin-bottom: 2rem;
   cursor: pointer;
+  color: white;
 }
 
 .nm-container .fund-btn button {
@@ -95,6 +101,11 @@
 /* Media queries for responsiveness */
 
 @media (max-width: 1200px) {
+  .n-wrapper {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+  }
   .menu-right {
     display: none;
   }
@@ -111,5 +122,34 @@
 
   .nm-container {
     display: none;
+  }
+}
+
+/* for sticky navbar  */
+
+.sticky {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.sticky .nd-container {
+  background-color: white;
+  color: var(--title-color);
+  box-shadow: 10px 12px 48px rgba(181, 187, 203, 0.206);
+}
+
+.sticky .nd-container a {
+  color: var(--title-color);
+}
+
+.sticky .n-container {
+  padding: 1rem;
+}
+
+@media (max-width: 1200px) {
+  .sticky .nd-container {
+    background-color: var(--primary-color);
+    color: white;
   }
 }

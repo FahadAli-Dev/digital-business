@@ -23,7 +23,7 @@ const WhoWeInvest = () => {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
   return (
-    <div className={style["wwi-wrapper"]}>
+    <div id="who-we-invest-in" className={style["wwi-wrapper"]}>
       <div className={style["wwi-container"]}>
         {/* left side  */}
         <div className={style["wwi-left"]}>
