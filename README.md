@@ -1,36 +1,155 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 📌 Digital Business
 
-## Getting Started
+A modern, responsive, and animated web application built with **Next.js 15**, **React 19**, and **custom CSS modules**. This project demonstrates professional frontend development practices with perfect design, smooth animations, and modular component structure.
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## 🌍 Live Demo
+
+🔗 [https://digital-business-rho.vercel.app/](https://digital-business-rho.vercel.app/)
+
+---
+
+## 🚀 Features
+
+- **Next.js 15 (App Router)** for optimized routing and server rendering.
+- **React 19** with the latest features.
+- **Custom CSS Modules** for component‑level styling.
+- **Responsive Layout** – optimized for mobile, tablet, and desktop.
+- **Animated UI** using `motion` for smooth transitions.
+- **Image Optimization** with Next.js `<Image />` component.
+- **Interactive Slider** using `react-slick` and `slick-carousel`.
+- **SEO‑friendly** with Next.js best practices.
+- **Deployed on Vercel** for global performance.
+
+---
+
+## 📂 Project Structure
+
+```
+📦 digital-business
+ ┣ 📂 src
+ ┃ ┣ 📂 app
+ ┃ ┃ ┣ 📜 layout.js          # Root layout file
+ ┃ ┃ ┣ 📜 page.jsx           # Homepage entry
+ ┃ ┃ ┣ 📜 page.module.css    # Page-specific styles
+ ┃ ┃
+ ┃ ┣ 📂 style
+ ┃ ┃ ┗ 📜 global.css         # Global styles
+ ┃
+ ┃ ┣ 📂 components
+ ┃ ┃ ┣ 📂 Hero
+ ┃ ┃ ┃ ┣ 📜 Hero.jsx
+ ┃ ┃ ┃ ┗ 📜 Hero.module.css
+ ┃ ┃ ┣ 📂 Navbar
+ ┃ ┃ ┃ ┣ 📜 Navbar.jsx
+ ┃ ┃ ┃ ┗ 📜 Navbar.module.css
+ ┃ ┃ ┣ 📂 Testimonials
+ ┃ ┃ ┃ ┣ 📜 Testimonials.jsx
+ ┃ ┃ ┃ ┣ 📜 Testimonials.module.css
+ ┃ ┃ ┃ ┗ 📂 SlickSlider
+ ┃ ┃ ┃   ┣ 📜 SlickSlider.jsx
+ ┃ ┃ ┃   ┗ 📜 SlickSlider.module.css
+ ┃ ┃ ┣ 📂 BrandingVideo
+ ┃ ┃ ┃ ┣ 📜 BrandingVideo.jsx
+ ┃ ┃ ┃ ┗ 📜 BrandingVideo.module.css
+ ┃ ┃ ┗ ... (other components with same structure)
+ ┃
+ ┃ ┣ 📂 utils
+ ┃ ┃ ┣ 📜 data.jsx           # Centralized data/config
+ ┃ ┃ ┗ 📜 animation.js      # Centralized animation variants
+ ┃
+ ┣ 📂 public
+ ┃ ┣ 📂 images              # Project images/assets
+ ┃ ┗ favicon.ico
+ ┃
+ ┣ 📜 package.json
+ ┣ 📜 README.md
+ ┗ 📜 .gitignore
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+> 🔑 Each component has its **own folder** with a `.jsx` file and a `.module.css` file to keep the structure modular and scalable.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🛠 Tech Stack
 
-## Learn More
+- **Framework:** [Next.js 15](https://nextjs.org/)
+- **Library:** [React 19](https://react.dev/)
+- **Styling:** Custom CSS Modules
+- **Animations:** [motion](https://motion.dev/)
+- **Slider:** [react-slick](https://react-slick.neostack.com/) + slick-carousel
+- **Icons:** [react-icons](https://react-icons.github.io/react-icons/)
+- **Deployment:** [Vercel](https://vercel.com/)
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## ⚙️ Installation & Setup
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+1. **Clone the repository:**
 
-## Deploy on Vercel
+   ```bash
+   git clone https://github.com/your-username/digital-business.git
+   cd digital-business
+   ```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+2. **Install dependencies:**
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+   ```bash
+   npm install
+   ```
+
+3. **Run development server:**
+
+   ```bash
+   npm run dev
+   ```
+
+   Project will be available at: [http://localhost:3000](http://localhost:3000)
+
+4. **Build for production:**
+
+   ```bash
+   npm run build
+   npm start
+   ```
+
+---
+
+## 📦 Dependencies
+
+From `package.json`:
+
+```json
+{
+  "dependencies": {
+    "motion": "^12.23.12",
+    "next": "15.4.2",
+    "react": "19.1.0",
+    "react-dom": "19.1.0",
+    "react-icons": "^5.5.0",
+    "react-slick": "^0.31.0",
+    "slick-carousel": "^1.8.1"
+  },
+  "devDependencies": {
+    "@eslint/eslintrc": "^3",
+    "eslint": "^9",
+    "eslint-config-next": "15.4.2"
+  }
+}
+```
+
+---
+
+## ✨ Author
+
+**Fahad Ali**\
+Frontend Developer | Pakistan
+📧 [fa6084904@gmail.com](mailto:fa6084904@gmail.com)\
+🔗 [LinkedIn Profile](https://www.linkedin.com/in/fahad-ali-759700369/)
+
+---
+
+## 📌 Notes
+
+- This project follows **best industry practices** for folder structure, styling, and component modularity.
