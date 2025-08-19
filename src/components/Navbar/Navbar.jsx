@@ -15,7 +15,9 @@ import Link from "next/link";
 const Navbar = () => {
   const [openMobileMenu, setOpenMobileMenu] = useState(false);
   const [navStyle, setNavStyle] = useState("");
+  const [navShadow, setNavShadow] = useState("");
   const { scrollYProgress } = useScroll();
+  const { scrollY } = useScroll();
   const smooth = useSpring(scrollYProgress, {
     stiffness: 100,
     damping: 30,
@@ -30,8 +32,16 @@ const Navbar = () => {
     }
   });
 
+  useMotionValueEvent(scrollY, "change", (latest) => {
+    if (latest > 1) {
+      setNavShadow(style.shadow);
+    } else {
+      setNavShadow("");
+    }
+  });
+
   return (
-    <section className={`${style["n-wrapper"]} ${navStyle}`}>
+    <section className={`${style["n-wrapper"]} ${navStyle} ${navShadow}`}>
       {/* desktop menu  */}
       <div className={style["nd-container"]}>
         <div className={style["n-container"]}>
